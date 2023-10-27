@@ -211,9 +211,15 @@ h1,h2,h3,h4,p{
   }
 }
 @media(max-width:520px){
+  .banner-quote-home{
+    padding-right: 27%;
+  }
   .home-banner-trophy {
-    bottom: 185px;
-    right: 30px;
+    bottom: 215px;
+    right: 15px;
+}
+.banner-quote-home p{
+  padding-right: 70px;
 }
 .banner-quote-home a{
   font-size: 12px !important;
