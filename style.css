@@ -120,15 +120,13 @@ h1,h2,h3,h4,p{
 }
 .banner{
     background-image: url(./Images/banner-bg.svg);
-    background: red;
+    background-size: cover;
 }
 .banner-about{
-    background-image: url(./Images/about-banner-bg.svg);
-    background: red;
+    background-image: url(./Images/banner-bg.svg);
 }
 .banner-nomination{
-    background-image: url(./Images/nomination-banner-bg.svg);
-    background: red;
+    background-image: url(./Images/banner-bg.svg);
 }
 .home-banner-wrapper {
     position: relative;
@@ -144,8 +142,28 @@ h1,h2,h3,h4,p{
     right: 100px;
     bottom: 25px;
 }
+.responsive-trophy{
+  display: none;
+}
+@media(max-width:768px){
+  .responsive-trophy{
+    display: block !important;
+  }
+  .home-banner-trophy{
+    bottom: 305px;
+    right: 50px;
+  }
+}
 .home-banner-trophy img{
     height: 760px;
+}
+@media(max-width:768px){
+  .home-banner-trophy img{
+    height: 453px;
+  }
+  .home-banner-trophy > img {
+    display: none;
+  }
 }
 @media(min-width:1560px){
   .home-banner-trophy img{
@@ -159,6 +177,34 @@ h1,h2,h3,h4,p{
     box-sizing: border-box;
     margin-left: 80px;
 }
+@media(max-width:992px){
+  .banner-quote-home{
+    margin-left: 0;
+  }
+ 
+}
+@media (max-width:768px){
+  .banner-quote-home{
+    width: 100%;
+    margin-left: 0;
+    padding: 30px 40% 30px 30px;
+  }
+}
+@media (max-width:580px){
+  .banner-quote-home{
+    height: 495px;
+    padding-right: 20%;
+  }
+  .banner-quote-home p{
+    padding-right: 150px;
+  }
+  .banner-quote-home a{
+    width: max-content !important;
+  }
+  .home-banner-trophy{
+    bottom: 265px;
+  }
+}
 .banner-quote-home h3 {
     color: #FFF;
     font-size: 36px;
@@ -166,6 +212,12 @@ h1,h2,h3,h4,p{
     font-weight: 700;
     line-height: normal;
     margin-bottom: 7px;
+}
+@media(max-width:992px){
+  .banner-quote-home h3{
+    font-size: 34px;
+  }
+  
 }
 .banner-quote-home p {
     color: #FFF;
@@ -175,6 +227,12 @@ h1,h2,h3,h4,p{
     line-height: normal;
     text-transform: capitalize;
     margin-bottom: 32px;
+}
+@media(max-width:992px){
+  .banner-quote-home p{
+    font-size: 32px;
+  }
+  
 }
 .banner-about .banner-quote-home{
     background: #00AEEF;
@@ -1115,12 +1173,18 @@ ul#primary-menu {
     position: relative;
     width: 100%;
     display: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #ec008c;
     box-sizing: border-box;
   }
 }
 .nav__link:hover + .sub-nav {
   display: block;
+  position: inherit;
+}
+@media(min-width:992px){
+  .nav__link:hover + .sub-nav{
+    position: absolute;
+  }
 }
 .sub-nav:hover {
   display: block;
