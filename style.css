@@ -1189,9 +1189,12 @@ ul#primary-menu {
   padding: 20px 30px;
   top: 110px;
 }
-.sub-nav:hover{
-  display: block !important;
-  position: inherit;
+
+@media(max-width:992px){
+  .sub-nav:hover{
+    display: block !important;
+    position: inherit;
+  }
 }
 .menu-item ul.sub-nav a.sub-nav__link {
   padding: 0;
