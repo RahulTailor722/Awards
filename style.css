@@ -165,6 +165,11 @@ h1,h2,h3,h4,p{
     display: none;
   }
 }
+@media(max-width:520px){
+  .home-banner-trophy img{
+    height: 273px;
+  }
+}
 @media(min-width:1560px){
   .home-banner-trophy img{
     height: 860px;
@@ -192,7 +197,7 @@ h1,h2,h3,h4,p{
 }
 @media (max-width:580px){
   .banner-quote-home{
-    height: 495px;
+    height: max-content;
     padding-right: 20%;
   }
   .banner-quote-home p{
@@ -205,6 +210,16 @@ h1,h2,h3,h4,p{
     bottom: 265px;
   }
 }
+@media(max-width:520px){
+  .home-banner-trophy {
+    bottom: 185px;
+    right: 30px;
+}
+.banner-quote-home a{
+  font-size: 12px !important;
+}
+}
+
 .banner-quote-home h3 {
     color: #FFF;
     font-size: 36px;
@@ -213,11 +228,16 @@ h1,h2,h3,h4,p{
     line-height: normal;
     margin-bottom: 7px;
 }
+
 @media(max-width:992px){
   .banner-quote-home h3{
     font-size: 34px;
   }
-  
+}
+@media(max-width:520px){
+  .banner-quote-home h3{
+    font-size: 18px;
+  }
 }
 .banner-quote-home p {
     color: #FFF;
@@ -228,11 +248,17 @@ h1,h2,h3,h4,p{
     text-transform: capitalize;
     margin-bottom: 32px;
 }
+
 @media(max-width:992px){
   .banner-quote-home p{
     font-size: 32px;
   }
   
+}
+@media(max-width:520px){
+  .banner-quote-home p{
+    font-size: 18px;
+  }
 }
 .banner-about .banner-quote-home{
     background: #00AEEF;
