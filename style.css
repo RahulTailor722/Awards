@@ -998,6 +998,8 @@ body {
 .logo {
   width: 220px;
   height: 120px;
+  display: flex;
+  align-items: center;
 }
 @media(min-width:1180px){
   .logo{
@@ -1186,6 +1188,10 @@ ul#primary-menu {
   z-index: 9;
   padding: 20px 30px;
   top: 110px;
+}
+.sub-nav:hover{
+  display: block !important;
+  position: inherit;
 }
 .menu-item ul.sub-nav a.sub-nav__link {
   padding: 0;
