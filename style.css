@@ -113,20 +113,52 @@ h1,h2,h3,h4,p{
     margin: 0;
 }
 /* home banner css start  */
+section.main-banner-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-banner-wrapper span.banner-light {
+  position: absolute;
+}
+.banner-light:nth-child(1){
+  top: -376px;
+  left: -372px;
+  width: 50%;
+  transform: rotate(45deg);
+}
+.banner-light:nth-child(2){
+  top: -357px;
+  right: -342px;
+  width: 50%;
+  transform: rotate(-35deg);
+}
+.banner-light:nth-child(3){
+  bottom: -406px;
+  right: -382px;
+  width: 50%;
+  transform: rotate(-485deg);
+}
+.banner-light:nth-child(4){
+  bottom: -316px;
+  left: -312px;
+  width: 50%;
+  transform: rotate(-195deg);
+}
 .banner, .banner-about, .banner-nomination{
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
 .banner{
-    background-image: url(./Images/banner-bg.svg);
+    background-image: url(./Images/banner-bg.png);
     background-size: cover;
 }
 .banner-about{
-    background-image: url(./Images/banner-bg.svg);
+    background-image: url(./Images/about-banner.png);
 }
 .banner-nomination{
-    background-image: url(./Images/banner-bg.svg);
+    background-image: url(./Images/nomination-banner.png);
 }
 .home-banner-wrapper {
     position: relative;
@@ -135,8 +167,18 @@ h1,h2,h3,h4,p{
     height: 100vh;
     overflow: hidden;
     padding-top: 50px;
+    
 }
-
+.home-banner-wrapper:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  /* background-image: url(./Images/ribons-bg.png); */
+  background-size: cover;
+}
 .home-banner-trophy {
     position: absolute;
     right: 100px;
@@ -343,6 +385,31 @@ h1,h2,h3,h4,p{
     line-height: normal;
     margin-bottom: 6px;
 }
+@media(max-width:767px){
+  .awards-content-wrapper h2, .content-wrapper h3, .title-wrapper h3, .print-design-award-wrapper h3,
+  .sponser-section-wrapper h3
+  {
+    font-size: 24px !important;
+  }
+  .awards-content-wrapper p, .title-wrapper p, .print-design-award-wrapper p{
+    font-size: 16px !important;
+  }
+  .button-wrapper a{
+    font-size: 18px !important;
+  }
+  .participate-main-wrapper{
+    gap: 40px;
+  }
+  .how-to-participate{
+    padding: 45px 0 !important;
+  }
+  .counter-content h3{
+    font-size: 32px !important;
+  }
+  .counter-content p{
+    font-size: 20px !important;
+  }
+}
 .awards-deserving-main {
     display: grid;
     padding-top: 20px;
@@ -490,6 +557,11 @@ footer {
     font-weight: 700;
     line-height: normal;
 }
+@media(max-width:768px){
+  footer{
+    font-size: 16px;
+  }
+}
 /* footer css end  */
 
 /* light box css start  */
@@ -499,6 +571,11 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     gap: 52px;
     padding: 91px 0px;
+  }
+  @media(max-width:768px){
+    .thumbs {
+      padding: 40px 0px;
+    }
   }
   @media(min-width:991px){
     .thumbs{
@@ -517,6 +594,17 @@ footer {
   .thumbs > a img {
     width: 54px;
     height: 40px;
+}
+@media(max-width:768px){
+  .thumbs > a{
+    height: auto !important;
+    font-size: 25px !important;
+    gap: 50px;
+  }
+  .thumbs > a img {
+    width: 34px;
+    height: 30px;
+}
 }
   .thumbs >  a{
     transition: all 0.5s ease-in-out;
@@ -618,7 +706,7 @@ footer {
     display: block;
     width: 1em;
     height: 1em;
-    font-size: 3.5rem;
+    font-size: 3.5rem;  
   }
 /* light box css end  */
 
@@ -627,11 +715,12 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 49px;
-    margin: 94px 0px 105px 0px;
+    margin: 40px 0px 40px 0px;
 }
 @media(min-width:768px){
   .about-founder-content-wrapper {
     grid-template-columns: 403px 1fr;
+    margin: 94px 0px 105px 0px;
   }
 }
 @media(min-width:992px){
@@ -807,12 +896,14 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 21px;
-    margin: 48px 0;
+    margin: 15px 0;
 }
 @media(min-width:768px){
   .jure-card-wrapper{
     grid-template-columns: 1fr 1fr;
+    margin: 48px 0;
   }
+  
 }
 @media(min-width:1100px){
   .jure-card-wrapper{
@@ -834,7 +925,12 @@ button.modal-open {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    
+}
+@media(max-width:768px){
+  .jure-main-wrapper h3{
+    padding-top: 40px;
+    font-size: 22px;
+  }
 }
 button.modal-open:hover{
     background-color: #ffcb05;
@@ -856,7 +952,14 @@ button.modal-open img {
     line-height: normal;
     margin-bottom: 5px;
     font-family: Poppins;
-
+}
+@media(max-width:768px){
+  .jure-description h4{
+    font-size: 22px;
+  }
+  .jure-description p{
+    font-size: 18px;
+  }
 }
 .jure-description p {
     color: #000;
