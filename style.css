@@ -160,7 +160,7 @@ section.main-banner-wrapper {
 .banner-nomination{
     background-image: url(./Images/nomination-banner.png);
 }
-.Award-Destination{
+.Award-Destination, .season{
   background-image: url(./Images/nomination-banner.png);
 }
 .home-banner-wrapper {
@@ -185,7 +185,7 @@ position: relative;
   right: 0;
   height: 100%;
   width: 100%;
-  background-image: url(./Images/Ribbon\ Animation.gif);
+  background-image: url(./Images/Ribbon\ Animation\ \(1\).gif);
   background-size: cover;
 }
 .home-banner-trophy {
@@ -591,12 +591,25 @@ footer {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  .thumbs a:first-child{
+  .thumbs a:nth-child(1){
     background: #FFCC29;
   }
-  .thumbs a:last-child{
+  .thumbs a:nth-child(2){
     background: #EC268F;
   }
+  .thumbs a:nth-child(3){
+    background: #00AFEF;
+  }
+  .thumbs a:nth-child(4){
+    background: #D2AB67;
+  }
+  .thumbs a:nth-child(5){
+    background: #A6CE39;
+  }
+  .thumbs a:nth-child(6){
+    background: #000;
+  }
+
   .thumbs >  a:hover{
     opacity: 0.8;
   }
@@ -795,7 +808,7 @@ footer {
     position: relative;
     margin: 0;
   }
-  .accordion-wrapper:after{
+  /* .accordion-wrapper:after{
     content: '';
     position: absolute;
     background-image: url(./Images/arrow-down.svg);
@@ -805,7 +818,34 @@ footer {
     top: 22px;
     right: 15px;
     background-repeat: no-repeat;
+  } */
+  .btn-wrapper button{
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    padding: 0 80px;
   }
+  .btn-wrapper button:after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background: black;
+    left: 15px;
+    top: 50%;
+  }
+  .btn-wrapper button:before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 22px;
+    background: black;
+    left: 16px;
+    top: 50%;
+    transform: rotate(90deg);
+  }
+  .accordion-wrapper.active .btn-wrapper button:before {
+    display: none;
+}
   @media(max-width:767px){
     .accordion-wrapper:after{
       right: 0;
