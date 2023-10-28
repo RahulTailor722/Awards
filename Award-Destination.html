@@ -117,4 +117,28 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+  // Toggle menu on click
+  $("#menu-toggler").click(function() {
+    toggleBodyClass("menu-active");
+  });
+
+  function toggleBodyClass(className) {
+    document.body.classList.toggle(className);
+  }
+
+ });
+    </script>
+
+    <script>
+      $(document).ready(function(){
+  $('#primary-menu li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+    </script>
 </body>
