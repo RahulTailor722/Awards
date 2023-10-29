@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a id="button">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+
+  </a>
     <!-- banner section start  -->
     <section class="main-banner-wrapper">
       <span class="banner-light">
@@ -283,6 +287,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
     <script>
       $(document).ready(function() {
   // Toggle menu on click
@@ -304,6 +309,25 @@
     $(this).addClass("active");
 });
 });
+    </script>
+    <!-- back to top script  -->
+    <script>
+      var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '50');
+});
+
+
     </script>
 </body>
 </html>

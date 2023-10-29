@@ -1521,3 +1521,42 @@ ul#primary-menu {
   object-fit: cover;
 }
 /* awards destination css End  */
+
+#button {
+  display: inline-block;
+  background-color: #ec268f;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(max-width:767px){
+  #button {
+    height: 50px;
+    width: 50px;
+  }
+  a#button i{
+    font-size: 21px;
+  }
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+a#button i {
+  font-size: 28px;
+  color: white;
+}
