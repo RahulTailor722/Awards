@@ -185,7 +185,7 @@ position: relative;
   right: 0;
   height: 100%;
   width: 100%;
-  /* background-image: url(./Images/Ribbon\ Animation-new.gif); */
+  background-image: url(./Images/Ribbon\ Animation-new.gif);
   background-size: cover;
 }
 .home-banner-trophy {
@@ -313,7 +313,7 @@ position: relative;
 }
 .banner-quote-home p {
     color: #FFF;
-    font-size: 36px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1356,7 +1356,7 @@ ul#primary-menu {
   ul#primary-menu{
     height: auto;
     padding: 0;
-    gap: 25px;
+    gap: 35px;
   }
   .logo a{
     width: 260px;
@@ -1403,7 +1403,7 @@ ul#primary-menu {
   .nav-menu .menu-item.dropdown > a:after{
     right: -24px;
     margin-top: 3px;
-    right: -26px;
+    right: -15px;
   }
   .nav-menu .menu-item.dropdown a:hover:after{
     margin: 0;
@@ -1416,10 +1416,14 @@ ul#primary-menu {
 @media(min-width:992px){
   .nav-menu .menu-item a{
     color: #FFF;
-    margin: 0px 10px !important;
+    /* margin: 0px 10px !important; */
     text-align: right;
     padding: 60px 0px;
     text-transform: capitalize;
+    padding-right: 10px;
+  }
+  .nav-menu .menu-item:last-child a{
+    padding-right: 0;
   }
 }
 @media(min-width:1080px){
