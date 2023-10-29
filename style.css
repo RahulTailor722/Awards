@@ -1368,7 +1368,8 @@ ul#primary-menu {
     line-height: 1;
   }
   .nav-menu .menu-item.dropdown a:hover:after{
-    transform: rotate(90deg);
+    transform: rotateX(190deg)
+    
   }
 }
 
