@@ -1383,9 +1383,9 @@ ul#primary-menu {
     transition: all 0.5s ease-in-out;
   }
   .nav-menu .menu-item.dropdown a:hover:after{
-    transform: rotateX(190deg);
-    top: 23px;
+    transform: rotateX(190deg) translateY(-50%);
     transition: all 0.5s ease-in-out;
+    top: calc(50% - 16px);
   }
 }
 
