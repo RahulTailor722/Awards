@@ -833,6 +833,20 @@ footer {
     transition: all 0.5s ease-in-out;
     padding: 0 80px;
   }
+  @media(max-width:768px){
+    .btn-wrapper button{
+      padding: 0 10px 0px 50px;
+      line-height: 1.4;
+    }
+    .btn-wrapper button:after{
+      width: 15px !important;
+      left: 9px !important;
+    }
+    .btn-wrapper button:before{
+      width: 15px !important;
+      left: 9px !important;
+    }
+  }
   .btn-wrapper button:after{
     content: '';
     position: absolute;
