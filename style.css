@@ -1380,10 +1380,12 @@ ul#primary-menu {
     background-repeat: no-repeat;
     transform: translateY(-50%);
     line-height: 1;
+    transition: all 0.5s ease-in-out;
   }
   .nav-menu .menu-item.dropdown a:hover:after{
-    transform: rotateX(190deg)
-    
+    transform: rotateX(190deg);
+    top: 23px;
+    transition: all 0.5s ease-in-out;
   }
 }
 

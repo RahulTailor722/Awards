@@ -9,6 +9,9 @@
 </head>
 
 <body>
+  <a id="button">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </a>
        <!-- banner section start  -->
        <section>
         <div class="banner-nomination">
@@ -217,4 +220,23 @@
 });
 });
     </script>
+        <!-- back to top script  -->
+        <script>
+          var btn = $('#button');
+    
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+    
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '50');
+    });
+    
+    
+        </script>
 </body>
